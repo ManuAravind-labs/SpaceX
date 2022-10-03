@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="payloads"
+            type="com.android4you.space.domain.model.payloads.PayloadsModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{payloads.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_head_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/type_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{payloads.type}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_subhead_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_textview" />
+
+
+            <TextView
+                android:id="@+id/mass_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mass"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mass_value_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{payloads.mass_kg}"
+                android:textColor="#390039"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mass_textview" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#390039"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/type_textview" />
+
+            <TextView
+                android:id="@+id/customers_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/customers"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title_large_size"
+                app:layout_constraintEnd_toStartOf="@+id/customers_value_textview"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/customers_value_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@{payloads.customers[0]}"
+                android:textSize="@dimen/text_title_large_size"
+                app:layout_constraintStart_toEndOf="@+id/customers_textview"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/nationalities_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/nationalities"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title_large_size"
+                app:layout_constraintEnd_toStartOf="@+id/nationalities_value_textview"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customers_textview" />
+
+            <TextView
+                android:id="@+id/nationalities_value_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:text="@{payloads.nationalities[0]}"
+                android:textSize="@dimen/text_title_large_size"
+                app:layout_constraintStart_toEndOf="@+id/nationalities_textview"
+                app:layout_constraintTop_toBottomOf="@+id/customers_textview" />
+
+            <TextView
+                android:id="@+id/manufacturers_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/manufacturers"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title_large_size"
+                app:layout_constraintEnd_toStartOf="@+id/manufacturers_value_textview"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nationalities_textview" />
+
+            <TextView
+                android:id="@+id/manufacturers_value_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:text="@{payloads.manufacturers[0]}"
+                android:textSize="@dimen/text_title_large_size"
+                app:layout_constraintStart_toEndOf="@+id/manufacturers_textview"
+                app:layout_constraintTop_toBottomOf="@+id/nationalities_textview" />
+
+            <View
+                android:id="@+id/divider_bottom"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#390039"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/manufacturers_value_textview" />
+
+            <TextView
+                android:id="@+id/lifespan_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lifespan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title_small_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_bottom" />
+
+            <TextView
+                android:id="@+id/lifespan_value_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@{payloads.lifespan_years}"
+                android:textSize="@dimen/text_title_medium_size"
+                app:layout_constraintStart_toEndOf="@+id/lifespan_textview"
+                app:layout_constraintTop_toBottomOf="@+id/divider_bottom" />
+
+            <TextView
+                android:id="@+id/orbit_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/orbit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title_small_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lifespan_textview" />
+
+            <TextView
+                android:id="@+id/orbit_value_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@{payloads.orbit}"
+                android:textSize="@dimen/text_title_medium_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/orbit_textview"
+                app:layout_constraintTop_toBottomOf="@+id/lifespan_textview" />
+
+            <TextView
+                android:id="@+id/date_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title_small_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_bottom" />
+
+            <TextView
+                android:id="@+id/date_value_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03/03/1999"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

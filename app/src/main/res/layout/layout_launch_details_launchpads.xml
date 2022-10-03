@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="launchPads"
+            type="com.android4you.space.domain.model.pads.LaunchPadsModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/launchpad_titleview"
+            style="@style/TextviewStyle_Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_launchpads"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_vertical_margin"
+            android:layout_marginEnd="@dimen/medium_vertical_margin"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="3dp"
+            app:cardMaxElevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/launchpad_titleview">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/workout_grid_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:id="@+id/launchpad_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@{launchPads.name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/launchpad_full_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/full_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/launchpad_textview" />
+
+                <TextView
+                    android:id="@+id/launchpad_fullname_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@{launchPads.full_name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/launchpad_full_textview" />
+
+                <TextView
+                    android:id="@+id/locality_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/locality"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/launchpad_fullname_textview" />
+
+                <TextView
+                    android:id="@+id/locality_value_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center|end"
+                    android:text="@{launchPads.locality}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/locality_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/launchpad_fullname_textview" />
+
+                <TextView
+                    android:id="@+id/region_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/region"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/locality_textview" />
+
+                <TextView
+                    android:id="@+id/region_value_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|end"
+                    android:text="@{launchPads.region}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/region_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/locality_textview" />
+
+
+                <TextView
+                    android:id="@+id/timezone_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/time_zone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/region_textview" />
+
+                <TextView
+                    android:id="@+id/timezone_value_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|end"
+                    android:text="@{launchPads.timezone}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/timezone_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/region_textview" />
+
+                <TextView
+                    android:id="@+id/no_of_attempts_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/no_of_attempts"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/timezone_textview" />
+
+                <TextView
+                    android:id="@+id/no_of_attempts_value_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|end"
+                    android:text="@{launchPads.launch_attempts.toString()}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/no_of_attempts_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/timezone_textview" />
+
+
+                <TextView
+                    android:id="@+id/no_of_success_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/no_of_success"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/no_of_attempts_textview" />
+
+                <TextView
+                    android:id="@+id/no_of_success_value_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|end"
+                    android:text="@{launchPads.launch_successes.toString()}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/no_of_success_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/no_of_attempts_textview" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

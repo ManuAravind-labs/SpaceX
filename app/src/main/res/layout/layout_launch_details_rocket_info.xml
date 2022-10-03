@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="rockets"
+            type="com.android4you.space.domain.model.rockets.RocketModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="3dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_rockets"
+            style="@style/TextviewStyle_Header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rocket_cardview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/CardView_Style"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_view">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/test"
+                android:padding="@dimen/horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:text="@{rockets.name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_subhead_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/description_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_vertical_margin"
+                    android:text="@{rockets.description}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name_textview" />
+
+                <Space
+                    android:id="@+id/description_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description_textview" />
+
+                <TextView
+                    android:id="@+id/height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/title_height"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_subhead_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/diameter"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description_space" />
+
+                <TextView
+                    android:id="@+id/diameter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/title_diameter"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_subhead_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/weight"
+                    app:layout_constraintStart_toEndOf="@+id/height"
+                    app:layout_constraintTop_toBottomOf="@+id/description_space" />
+
+                <TextView
+                    android:id="@+id/weight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/title_mass"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_subhead_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/diameter"
+                    app:layout_constraintTop_toBottomOf="@+id/description_space" />
+
+                <Space
+                    android:id="@+id/description_barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+                <TextView
+                    android:id="@+id/heightValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/na"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/diameterValue"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description_barrier" />
+
+                <TextView
+                    android:id="@+id/diameterValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/na"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/weightValue"
+                    app:layout_constraintStart_toEndOf="@+id/heightValue"
+                    app:layout_constraintTop_toBottomOf="@+id/description_barrier" />
+
+                <TextView
+                    android:id="@+id/weightValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/na"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/diameterValue"
+                    app:layout_constraintTop_toBottomOf="@+id/description_barrier" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="heightValue, diameterValue, weightValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/flicker_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/barrier" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/payload_weight_titleview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:gravity="start"
+            style="@style/TextviewStyle_Header"
+            android:text="@string/title_payload_weight"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_subhead_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rocket_cardview" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/testcc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payload_weight_titleview">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/payload_weight_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

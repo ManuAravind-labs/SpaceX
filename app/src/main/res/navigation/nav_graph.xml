@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.android4you.space.presentation.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_payloadDetailsFragment"
+            app:destination="@id/payloadDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_launchDetailsFragment"
+            app:destination="@id/launchDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_crewDetailsFragment"
+            app:destination="@id/crewDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rocketsFragment"
+            app:destination="@id/rocketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/launchesFragment"
+        android:name="com.android4you.space.presentation.launches.LaunchesFragment"
+        android:label="LaunchesFragment" >
+        <action
+            android:id="@+id/action_launchesFragment_to_launchDetailsFragment"
+            app:destination="@id/launchDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/missionsFragment"
+        android:name="com.android4you.space.presentation.missions.MissionsFragment"
+        android:label="MissionsFragment" />
+    <fragment
+        android:id="@+id/rocketsFragment"
+        android:name="com.android4you.space.presentation.rockets.RocketsFragment"
+        android:label="RocketsFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.android4you.space.presentation.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/payloadsFragment"
+        android:name="com.android4you.space.presentation.payloads.PayloadsFragment"
+        android:label="PayloadsFragment" >
+        <action
+            android:id="@+id/action_payloadsFragment_to_payloadDetailsFragment"
+            app:destination="@id/payloadDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payloadDetailsFragment"
+        android:name="com.android4you.space.presentation.payloads.PayloadDetailsFragment"
+        android:label="PayloadDetailsFragment" />
+    <fragment
+        android:id="@+id/launchDetailsFragment"
+        android:name="com.android4you.space.presentation.launches.LaunchDetailsFragment"
+        android:label="LaunchDetailsFragment" >
+        <argument
+            android:name="launchmodel"
+            app:argType="com.android4you.space.domain.model.LaunchModel"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_launchDetailsFragment_to_payloadDetailsFragment"
+            app:destination="@id/payloadDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crewDetailsFragment"
+        android:name="com.android4you.space.presentation.crew.CrewDetailsFragment"
+        android:label="CrewDetailsFragment" />
+
+</navigation>

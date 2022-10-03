@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">SpaceX</string>
+
+    <string name="details_company">Space Exploration Technologies Corp. is an American spacecraft manufacturer, space launch provider, and a satellite communications corporation headquartered in Hawthorne, California. SpaceX was founded in 2002 by Elon Musk,</string>
+    <string name="title">SpaceX</string>
+    <string name="company">Company</string>
+    <string name="launches">Launches</string>
+    <string name="filter">Filter</string>
+    <string name="submit">Submit</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+
+    <string name="title_launches">Launches</string>
+    <string name="title_payloads">Payloads</string>
+    <string name="title_missions">Missions</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_rockets">Rockets</string>
+    <string name="title_launchpads">Launch Pads</string>
+    <string name="upcoming_launches">Upcoming Launches</string>
+
+    <string name="title_payload_weight">Payload weight</string>
+
+    <string name="title_height">Height</string>
+    <string name="title_mass">Mass</string>
+    <string name="title_diameter">Diameter</string>
+    <string name="na">--</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+
+    <string name="recommended">Recommended</string>
+    <string name="categories">Categories</string>
+    
+    <string name="customers">Customers:</string>
+    <string name="nationalities">Nationalities:</string>
+    <string name="manufacturers">Manufacturers:</string>
+    <string name="lifespan">Life Span in years:</string>
+    <string name="orbit">Orbit:</string>
+
+    <string name="Something_error">Something went wrong</string>
+
+    <string name="no_of_success">No of success:</string>
+    <string name="no_of_attempts">No of Attempts:</string>
+    <string name="time_zone">Time zone:</string>
+    <string name="region">Region:</string>
+    <string name="locality">Locality:</string>
+    <string name="full_name">Full Name:</string>
+</resources>

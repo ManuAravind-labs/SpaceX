@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/button_background.xml" value="0.236" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_favourite.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_play.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_sort.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_stop.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/selector.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/bottom_sheet_dialog_fragment.xml" value="0.34270833333333334" />
+        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_crew_details.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.31023550724637683" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_launch_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_launch_pads.xml" value="0.3161231884057971" />
+        <entry key="app/src/main/res/layout/fragment_launches.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_mission.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_pager_item.xml" value="0.15501519756838905" />
+        <entry key="app/src/main/res/layout/fragment_payload_details.xml" value="0.16261398176291794" />
+        <entry key="app/src/main/res/layout/fragment_payloads.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_rockets.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_ships.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_spacex_launch.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_grid_launches.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_launch_info.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_launches_banner.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_list_crew.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_list_launches.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_list_mission.xml" value="0.31023550724637683" />
+        <entry key="app/src/main/res/layout/item_list_ships.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_rocket.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_details_payloads.xml" value="0.2971014492753623" />
+        <entry key="app/src/main/res/layout/layout_history.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_launch_details.xml" value="0.18206521739130435" />
+        <entry key="app/src/main/res/layout/layout_launch_details_launchpads.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_launch_details_payloads.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_launch_details_rocket_info.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_launches.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_payload_weight.xml" value="0.2971014492753623" />
+        <entry key="app/src/main/res/layout/layout_payloads.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.31023550724637683" />
+        <entry key="app/src/main/res/layout/test_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

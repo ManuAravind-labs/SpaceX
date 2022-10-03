@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="crews"
+            type="com.android4you.space.domain.model.crew.CrewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/banner_imageview"
+            imageUrl="@{crews.image}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            app:layout_constraintDimensionRatio="1:2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:translationY="-50dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardMaxElevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/banner_imageview">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/titleView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{crews.name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/app_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/agency_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Agency"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleView" />
+
+                <TextView
+                    android:id="@+id/agency_value_textview"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|end"
+                    android:text="@{crews.agency}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/agency_textview"
+                    app:layout_constraintTop_toBottomOf="@id/titleView" />
+
+                <TextView
+                    android:id="@+id/status_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/agency_textview" />
+
+                <TextView
+                    android:id="@+id/status_value_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|end"
+                    android:text="@{crews.status.toUpperCase()}"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/status_textview"
+                    app:layout_constraintTop_toBottomOf="@id/agency_textview" />
+
+                <TextView
+                    android:id="@+id/wiki_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wikipedia"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:textSize="@dimen/text_title_large_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/status_textview" />
+                <TextView
+                    android:id="@+id/wiki_value_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{crews.wikipedia}"
+                    android:textColor="@color/link_color"
+                    android:textSize="@dimen/text_title_medium_size"
+                    android:textStyle="bold"
+                    android:autoLink="web"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/wiki_textview" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

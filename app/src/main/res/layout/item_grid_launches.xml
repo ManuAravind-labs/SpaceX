@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="launches"
+            type="com.android4you.space.domain.model.LaunchModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CardView_Style">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/launches_grid_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/launches_image"
+                imageUrl="@{launches.links.patch.small}"
+                android:layout_width="128dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/recommended"
+                android:padding="@dimen/large_horizontal_margin"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="4:3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+                tools:src="@drawable/ic_home_black_24dp" />
+
+            <LinearLayout
+                android:id="@+id/description_layout"
+                android:layout_width="128dp"
+                android:layout_height="50dp"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/launches_image">
+
+                <TextView
+                    android:id="@+id/launches_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:padding="@dimen/medium_vertical_margin"
+                    android:text="@{launches.name}"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Plank" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

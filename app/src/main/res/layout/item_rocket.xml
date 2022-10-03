@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="rockets"
+            type="com.android4you.space.domain.model.rockets.RocketModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rockets_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CardView_Style">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/workout_grid_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurface"
+            android:foreground="?attr/selectableItemBackground">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/workout_image"
+                imageUrl="@{rockets.flickr_images[0]}"
+                android:layout_width="128dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/recommended"
+                android:scaleType="center"
+                app:layout_constraintDimensionRatio="4:3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+                tools:src="@drawable/ic_home_black_24dp" />
+
+            <LinearLayout
+                android:id="@+id/description_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workout_image">
+
+                <TextView
+                    android:id="@+id/workout_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/medium_vertical_margin"
+                    android:textSize="14sp"
+                    android:text="@{rockets.name}"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textStyle="bold"
+                    tools:text="Plank" />
+
+            </LinearLayout><!---->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
