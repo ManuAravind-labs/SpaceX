@@ -7,15 +7,15 @@
         android:title="@string/title_home" />
     <item
         android:id="@+id/launchesFragment"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_rocket_icon"
         android:title="@string/title_launches" />
     <item
         android:id="@+id/missionsFragment"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_mission_icon"
         android:title="@string/title_missions" />
     <item
         android:id="@+id/payloadsFragment"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_icon_payload"
         android:title="@string/title_payloads" />
 
 </menu>

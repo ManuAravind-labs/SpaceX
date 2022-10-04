@@ -7,6 +7,11 @@
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_favourite.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_icon_mission.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_icon_payload.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_icon_rocket.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_mission_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_pause.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_play.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_sort.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_stop.xml" value="0.1" />
