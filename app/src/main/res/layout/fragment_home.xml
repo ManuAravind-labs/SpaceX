@@ -7,22 +7,27 @@
         android:layout_height="match_parent"
         android:background="@color/background_color">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/app_bar_home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/recycler_list"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/recycler_list"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar_home"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:navigationIcon="@drawable/ic_home_black_24dp"
-                app:title="@string/app_name" />
-        </com.google.android.material.appbar.AppBarLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/spacex_logo_black"
+                        app:layout_constraintBottom_toTopOf="@id/recycler_list"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                </com.google.android.material.appbar.AppBarLayout>
+
 
         <ProgressBar
             android:id="@+id/progressBar"
