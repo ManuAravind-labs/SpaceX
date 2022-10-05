@@ -19,17 +19,6 @@
             android:layout_height="wrap_content"
             android:background="@color/background_color">
 
-<!--            <androidx.appcompat.widget.AppCompatImageView-->
-<!--                android:id="@+id/banner_imageview"-->
-<!--                imageUrl="@{rocket.flickr_images[0]}"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:scaleType="center"-->
-<!--                app:layout_constraintDimensionRatio="1:2"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/view_pager"
                 android:layout_width="match_parent"

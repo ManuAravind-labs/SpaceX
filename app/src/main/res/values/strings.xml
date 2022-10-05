@@ -44,4 +44,18 @@
     <string name="region">Region:</string>
     <string name="locality">Locality:</string>
     <string name="full_name">Full Name:</string>
+    <string name="mass">Mass</string>
+    <string name="date">Date</string>
+    <string name="agency">Agency</string>
+    <string name="status">Status</string>
+    <string name="wikipedia">Wikipedia</string>
+
+
+
+
+
+
+
+
+
 </resources>
