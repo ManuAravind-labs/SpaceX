@@ -10,6 +10,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.android4you.space.R
 import com.android4you.space.databinding.FragmentPayloadsBinding
 import com.android4you.space.presentation.PayloadViewType
 import com.android4you.space.presentation.payloads.adapter.PayLoadsAdapter
@@ -61,10 +62,24 @@ class PayloadsFragment : Fragment() {
     private fun handleStateChange(state: PayloadsViewState) {
         when (state) {
             is PayloadsViewState.Empty -> Unit
-            is PayloadsViewState.Error -> {
+            is PayloadsViewState.NotFoundError -> {
                 _binding?.apply {
                     errorTextview.makeVisible()
-                    errorTextview.text = state.message
+                    errorTextview.text = getString(R.string.no_result)
+                    progressBar.makeGone()
+                }
+            }
+            is PayloadsViewState.NoNetworkError -> {
+                _binding?.apply {
+                    errorTextview.makeVisible()
+                    errorTextview.text = getString(R.string.no_internet)
+                    progressBar.makeGone()
+                }
+            }
+            is PayloadsViewState.UnknownError -> {
+                _binding?.apply {
+                    errorTextview.makeVisible()
+                    errorTextview.text = getString(R.string.server_error)
                     progressBar.makeGone()
                 }
             }

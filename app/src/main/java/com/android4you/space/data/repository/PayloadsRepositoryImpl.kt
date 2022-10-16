@@ -22,7 +22,7 @@ class PayloadsRepositoryImpl @Inject constructor(
                 saveAllPayloadsInLocal(body)
                 emit(NetworkState.Success(body))
             } else {
-                emit(NetworkState.Error(response.message()))
+                emit(NetworkState.Error(response.message(), null))
             }
         }
     }

@@ -29,12 +29,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/profileError"
+            android:id="@+id/error_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Failed to load profile"
-            android:textColor="#F44336" />
+            android:textColor="@android:color/black" />
 
     </ViewFlipper>
 </layout>

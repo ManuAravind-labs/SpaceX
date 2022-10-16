@@ -10,6 +10,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.android4you.space.R
 import com.android4you.space.databinding.FragmentLaunchPadsBinding
 import com.android4you.space.presentation.missions.adapter.LaunchPadsAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -49,8 +50,17 @@ class LaunchPadsFragment : Fragment() {
     private fun handleStateChange(state: LaunchPadsViewState) {
         when (state) {
             is LaunchPadsViewState.Empty -> Unit
-            is LaunchPadsViewState.Error -> {
+            is LaunchPadsViewState.NoNetworkError -> {
                 _binding?.viewFlipper?.displayedChild = 2
+                _binding?.errorTextview?.text = getString(R.string.no_internet)
+            }
+            is LaunchPadsViewState.NotFoundError -> {
+                _binding?.viewFlipper?.displayedChild = 2
+                _binding?.errorTextview?.text = getString(R.string.no_result)
+            }
+            is LaunchPadsViewState.UnknownError -> {
+                _binding?.viewFlipper?.displayedChild = 2
+                _binding?.errorTextview?.text = getString(R.string.server_error)
             }
             is LaunchPadsViewState.Success -> {
                 val listAdapter = LaunchPadsAdapter()

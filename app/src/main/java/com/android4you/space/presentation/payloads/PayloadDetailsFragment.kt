@@ -34,8 +34,8 @@ class PayloadDetailsFragment : Fragment() {
         _binding?.apply {
             payloads = payload
         }
-//        _binding?.toolbarHome?.setNavigationOnClickListener {
-//            findNavController().popBackStack()
-//        }
+        _binding?.backButton?.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 }
