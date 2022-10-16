@@ -1,6 +1,5 @@
 package com.android4you.space.data.di
 
-import com.android4you.space.BuildConfig
 import com.android4you.space.data.constants.Constants.Companion.BASE_URL
 import com.android4you.space.data.remote.ApiService
 import com.google.gson.FieldNamingPolicy
