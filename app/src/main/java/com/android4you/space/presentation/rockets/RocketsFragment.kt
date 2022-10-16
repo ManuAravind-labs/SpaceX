@@ -13,7 +13,8 @@ import com.android4you.space.domain.model.rockets.Height
 import com.android4you.space.domain.model.rockets.Mass
 import com.android4you.space.domain.model.rockets.RocketModel
 import com.android4you.space.presentation.launches.adapter.LaunchesBannerAdapter
-import java.util.*
+import java.util.Timer
+import java.util.TimerTask
 
 class RocketsFragment : Fragment() {
 
